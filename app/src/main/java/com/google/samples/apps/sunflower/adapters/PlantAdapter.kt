@@ -22,7 +22,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.composethemeadapter.MdcTheme
+import com.google.android.material.composethemeadapter3.Mdc3Theme
 import com.google.samples.apps.sunflower.HomeViewPagerFragmentDirections
 import com.google.samples.apps.sunflower.PlantListFragment
 import com.google.samples.apps.sunflower.compose.plantlist.PlantListItemView
@@ -47,7 +47,7 @@ class PlantAdapter : ListAdapter<Plant, RecyclerView.ViewHolder>(PlantDiffCallba
     ) : RecyclerView.ViewHolder(composeView) {
         fun bind(plant: Plant) {
             (itemView as ComposeView).setContent {
-                MdcTheme {
+                Mdc3Theme {
                     PlantListItemView(plant = plant) {
                         navigateToPlant(plant)
                     }
