@@ -43,6 +43,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -357,12 +358,11 @@ private fun PlantDetailsToolbar(
     modifier: Modifier = Modifier
 ) {
     Surface {
-        MediumTopAppBar(
+        CenterAlignedTopAppBar(
             title = {
                 Text(
                     text = plantName,
-                    style = MaterialTheme.typography.bodyLarge,
-                    color = MaterialTheme.colorScheme.primary
+                    style = MaterialTheme.typography.titleLarge
                 )
             },
             navigationIcon = {
