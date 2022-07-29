@@ -314,7 +314,8 @@ private fun PlantFab(
         // Semantics in parent due to https://issuetracker.google.com/184825850
         modifier = modifier.semantics {
             contentDescription = addPlantContentDescription
-        }
+        },
+        containerColor = MaterialTheme.colorScheme.secondary,
     ) {
         Icon(
             Icons.Filled.Add,
@@ -478,7 +479,7 @@ private fun PlantInformation(
         )
         Text(
             text = stringResource(id = R.string.watering_needs_prefix),
-            color = MaterialTheme.colorScheme.secondary,
+            color = MaterialTheme.colorScheme.primary,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .padding(horizontal = Dimens.PaddingSmall)
@@ -488,6 +489,7 @@ private fun PlantInformation(
             Text(
                 text = pluralStringResource(
                     R.plurals.watering_needs_suffix,
+                    wateringInterval,
                     wateringInterval
                 ),
                 modifier = Modifier
